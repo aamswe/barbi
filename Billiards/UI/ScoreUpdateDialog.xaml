@@ -1,0 +1,83 @@
+﻿<ContentDialog
+    x:Class="Billiards.UI.ScoreUpdateDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Billiards.UI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Update Score"
+    PrimaryButtonText="Done"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,20">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox Name="score" Grid.Row="0" FontSize="24" TextAlignment="Right" Text="0" IsEnabled="false"></TextBox>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="one" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,0" Width="80" Height="80" Click="Number_Click">
+                1
+            </Button>
+            <Button Name="two" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Width="80" Height="80" Click="Number_Click">
+                2
+            </Button>
+            <Button Name="three" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Margin="0,10,0,0" Width="80" Height="80" Click="Number_Click">
+                3
+            </Button>
+
+
+            <Button Name="four" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,0" Width="80" Height="80" Click="Number_Click">
+                4
+            </Button>
+            <Button Name="five" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Width="80" Height="80" Click="Number_Click">
+                5
+            </Button>
+            <Button Name="six" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Margin="0,10,0,0" Width="80" Height="80" Click="Number_Click">
+                6
+            </Button>
+
+
+            <Button Name="seven" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,10" Width="80" Height="80" Click="Number_Click">
+                7
+            </Button>
+            <Button Name="eight" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,10" Width="80" Height="80" Click="Number_Click">
+                8
+            </Button>
+            <Button Name="nine" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Margin="0,10,0,10" Width="80" Height="80" Click="Number_Click">
+                9
+            </Button>
+
+            <Button Name="Clear" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10,0,10" Width="80" Height="80">
+                Cls
+            </Button>
+            
+            
+            <Button Name="zero" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,10" Width="80" Height="80" Click="Number_Click">
+                0
+            </Button>
+
+            <Button Name="delete" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center"  Margin="0,10,0,10" Width="80" Height="80" Click="delete_Click">
+                Del
+            </Button>
+
+        </Grid>
+
+    </Grid>
+</ContentDialog>
